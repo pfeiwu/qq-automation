@@ -50,7 +50,7 @@ public class NTQQAutomation {
      */
     protected Element getMessageList() throws AutomationException{
         if (messageList == null) {
-            return getWindow().getElement().findFirst(new TreeScope(TreeScope.DESCENDANTS),automation.createNamePropertyCondition("消息列表"));
+            messageList = getWindow().getElement().findFirst(new TreeScope(TreeScope.DESCENDANTS),automation.createNamePropertyCondition("消息列表"));
         }
         return messageList;
     }
@@ -61,7 +61,7 @@ public class NTQQAutomation {
      */
     protected Element getSessionList() throws AutomationException{
         if (sessionList == null) {
-            return getWindow().getElement().findFirst(new TreeScope(TreeScope.DESCENDANTS),automation.createNamePropertyCondition("会话列表"));
+            sessionList = getWindow().getElement().findFirst(new TreeScope(TreeScope.DESCENDANTS),automation.createNamePropertyCondition("会话列表"));
         }
         return sessionList;
     }
